@@ -1,0 +1,10 @@
+htmlcov
+coverage.xml
+pytest.ini
+.coverage
+.pylintrc
+.git
+.gitignore
+.travis.yml
+Pipfile.lock
+.env.example

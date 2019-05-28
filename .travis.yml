@@ -1,0 +1,17 @@
+language: python
+
+python:
+  - "3.7"
+
+install:
+  - pip install pipenv
+  - pipenv install
+  - pipenv sync -d
+
+script:
+  - pytest
+  - pylint --rcfile .pylintrc wipm
+
+branches:
+  only:
+    - master

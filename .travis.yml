@@ -2,11 +2,14 @@ language: python
 
 services: mongodb
 
+sudo: true
+
 python:
   - "3.6"
 
 install:
-  - apt-get install libgomp1 
+  - apt-get -y update && apt-get -y upgrade
+  - apt-get install -y libgomp1 
   - pip install pipenv
   - pipenv install
   - pipenv sync -d

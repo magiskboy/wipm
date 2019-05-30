@@ -6,6 +6,7 @@ python:
   - "3.6"
 
 install:
+  - apt-get install libgomp1 
   - pip install pipenv
   - pipenv install
   - pipenv sync -d

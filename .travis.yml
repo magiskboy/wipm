@@ -7,15 +7,17 @@ sudo: true
 python:
   - "3.6"
 
-before_install:
-  - sudo apt-get install -y libgomp1
+os:
+  - osx
 
 addons:
-  apt:
+  homebrew:
+    packages:
+      - pipenv
+      - gcc@7
     update: true
 
 install:
-  - pip install pipenv
   - pipenv install
   - pipenv sync -d
 

@@ -7,9 +7,14 @@ sudo: true
 python:
   - "3.6"
 
+before_install:
+  - sudo apt-get install -y libgomp1
+
+addons:
+  apt:
+    update: true
+
 install:
-  - sudo apt-get -y update && sudo apt-get -y upgrade
-  - sudo apt-get install -y libgomp1 
   - pip install pipenv
   - pipenv install
   - pipenv sync -d

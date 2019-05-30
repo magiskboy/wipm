@@ -4,6 +4,7 @@
 
 from flask import Blueprint
 from flask_restplus import Api
+from wipm import exceptions
 
 __all__ = ["init_app", "API"]
 
@@ -15,6 +16,7 @@ API = Api(
     doc="/docs",
     description="WIPM backend"
 )
+exceptions.init_app(API)
 
 def init_app(app):
     """Register blueprint for app
@@ -23,4 +25,7 @@ def init_app(app):
 
 
 from .dataset import NS as dataset_ns
+from .regression import NS as regression_ns
+
 API.add_namespace(dataset_ns, path="/dataset")
+API.add_namespace(regression_ns, path="/regression")

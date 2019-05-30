@@ -9,4 +9,6 @@ def init_app(api):
     """
     @api.errorhandler(Exception)
     def handle_exception(error):
+        """Return 400 error when occur exceptions
+        """
         return {"message": str(error)}, 400

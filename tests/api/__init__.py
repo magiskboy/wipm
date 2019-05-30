@@ -1,10 +1,15 @@
+"""Testing API package
+@Author: NguyenKhacThanh
+"""
+
 import unittest
 import pytest
 
 
-@pytest.mark.usefixtures("client")
-@pytest.mark.usefixtures("client_class")
+@pytest.mark.usefixtures("inject_client")
 class APITestCase(unittest.TestCase):
+    """API Base Test Case
+    """
     def call_api(self, url=None, method=None, content=None):
         """Send request to server
         :param: url, str

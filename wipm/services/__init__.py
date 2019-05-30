@@ -3,7 +3,8 @@
 """
 
 
-__all__ = ["dataset"]
+__all__ = ["dataset", "regression"]
 
 
 from . import dataset
+from . import regression

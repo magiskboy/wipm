@@ -51,3 +51,4 @@ Open the following url on your browser to view swagger documentation http://127.
 * Flask-Restplus - extension of flask for implement restful api [https://flask-restplus.readthedocs.io/en/stable/](https://flask-restplus.readthedocs.io/en/stable/)
 * Pytest - python testing framework [https://docs.pytest.org/en/latest/](https://docs.pytest.org/en/latest/)
 * mongoengine - python ORMs database framework for Mongo [http://mongoengine.org/](http://mongoengine.org/)
+* GridFS in MongoDB for store large binary files - [https://www.mongodb.com/blog/post/storing-large-objects-and-files-in-mongodb](https://www.mongodb.com/blog/post/storing-large-objects-and-files-in-mongodb)

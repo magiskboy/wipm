@@ -11,5 +11,5 @@ __all__ = ["CREATE_DATASET_RES"]
 
 
 CREATE_DATASET_RES = api.inherit("CreateDatasetResponse", BASE_RES, {
-    "id": fields.String()
+    "id": fields.String(required=True, min_length=24, max_length=24)
 })

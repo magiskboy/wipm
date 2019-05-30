@@ -7,9 +7,9 @@ import os
 
 _ENV = os.environ
 
-DEBUG = True and _ENV.get("DEBUG", "0") == "0"
+DEBUG = False or _ENV.get("DEBUG", "0") == "1"
 
-TESTING = True and _ENV.get("TESTING", "0") == "1"
+TESTING = False or _ENV.get("TESTING", "0") == "1"
 
 SECRET_KEY = _ENV.get("SECRET_KEY", "secret")
 

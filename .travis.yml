@@ -7,11 +7,8 @@ sudo: true
 python:
   - "3.6"
 
-os:
-  - osx
-
 addons:
-  homebrew:
+  apt:
     packages:
       - pipenv
       - gcc@7

@@ -4,11 +4,13 @@ EXPOSE 80
 
 WORKDIR /app
 
-ADD . /app
+RUN apk add gcc musl-dev
 
-RUN apk add gcc musl-dev 
+COPY Pipfile .
 
 RUN pip install pipenv && pipenv install
+
+COPY . /app
 
 ENTRYPOINT ./docker-entrypoint.sh
 

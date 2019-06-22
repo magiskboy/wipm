@@ -113,7 +113,7 @@ def train_estimator(id_model, id_dataset, test_size=0.1):
     :param: id_model, str
     :param: id_dataset, str
     :return: tuple of (mean_squared_error, mean_absolute_error)
-    if type_model is 'neural_network', result include loss_curve
+    if type_model is 'neural_network_regression', result include loss_curve
     """
     # load dataset
     dataset = models.Dataset.find(id_dataset)
